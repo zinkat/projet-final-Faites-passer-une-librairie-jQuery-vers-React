@@ -1,0 +1,61 @@
+.containerName {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+label {
+  display: block;
+  text-align: start;
+  margin-top: 1rem;
+  margin-bottom: 10px;
+}
+#create-employee {
+  width: 300px;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px 4px #94ad181e;
+}
+
+.adress {
+  margin-top: 1rem;
+  border-color: #5b6f096a;
+}
+
+input,
+select {
+  border: 2px solid #5b6f096a;
+  color: #4e5e0e;
+  border-radius: 5px;
+  height: 25px;
+  width: 80%;
+}
+
+.btn {
+  background-color: #5a6f09;
+  width: 100px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #93ad18;
+}
+.btn:disabled {
+  cursor: not-allowed;
+  background-color: gray;
+}
+.divBtn {
+  margin: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+option {
+  color: #5a6f09;
+  font-size: 16px;
+}

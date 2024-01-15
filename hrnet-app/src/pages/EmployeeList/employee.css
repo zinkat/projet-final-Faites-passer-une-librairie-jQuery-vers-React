@@ -1,0 +1,15 @@
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+}
+.homePage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.containerTable{
+
+    width: 100%;
+}
