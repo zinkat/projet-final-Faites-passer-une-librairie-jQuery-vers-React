@@ -34,8 +34,8 @@ tbody tr:nth-child(odd) {
 }
 
 .arrow {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   position: relative;
   left: 90%;
   display: flex;

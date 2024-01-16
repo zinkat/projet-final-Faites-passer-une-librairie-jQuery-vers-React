@@ -1,3 +1,4 @@
+
 import PropTypes from 'prop-types'
 import './modal.css'
 
@@ -9,10 +10,9 @@ const Modal = ({ isOpen, onClose, children, contentBtn }) => {
     <div className={modalClasses}>
       <div className={contentClasses}>
         <div className="close-icone">
-          <button onClick={onClose} className="icone">
-            &times;
-          </button>
+          <button onClick={onClose}  className='icone'>&times;</button>
         </div>
+
         {children}
         <button onClick={onClose} className="close-btn">
           {contentBtn}
