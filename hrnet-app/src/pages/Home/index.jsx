@@ -1,14 +1,17 @@
+import React from 'react';
 import Form from '../../components/Form/MyForm'
 import './home.css'
-import Modal from '../../components/Modal'
-import React, { useState } from 'react'
+// import Modal from '../../components/Modal'
+ import  { useState } from 'react'
+ import Modal from 'react-modal-zinkat'
+import 'react-modal-zinkat/dist/index.css'
 
 
 function Home() {
   const [isModalOpen, setModalOpen] = useState(false)
 
-  const openModal = () => setModalOpen(true)
-  const closeModal = () => setModalOpen(false)
+ const openModal = () => setModalOpen(true)
+ const closeModal = () => setModalOpen(false)
 
   const handleFormSubmit = () => {
     openModal()
