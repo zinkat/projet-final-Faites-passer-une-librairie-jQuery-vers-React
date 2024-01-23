@@ -8126,6 +8126,14 @@ react-scripts@^5.0.1:
   optionalDependencies:
     fsevents "^2.3.2"
 
+react-select-zinkat@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npmjs.org/react-select-zinkat/-/react-select-zinkat-1.1.0.tgz"
+  integrity sha512-w+K+36rtfIgMYJK9oA4u/UzP+2pXSj0BgHL2yB8q4ATzdFKRQYSFiGRJiXq/LHduReNtdmugUAdbLEgr5J8p1Q==
+  dependencies:
+    prop-types "^15.8.1"
+    react "^18.2.0"
+
 "react@^15.5.x || ^16.x || ^17.x || ^18.x", react@^16.0.0, "react@^16.8.0 || ^17 || ^18", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.9.0 || ^17 || ^18", "react@^16.9.0 || ^17.0.0 || ^18", react@^18.0, react@^18.0.0, react@^18.2.0, "react@>= 16", react@>=16.8:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"

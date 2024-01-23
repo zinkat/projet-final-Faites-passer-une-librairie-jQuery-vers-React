@@ -1,7 +1,7 @@
 
 import { createSlice } from '@reduxjs/toolkit';
 
-// Définissez l'état initial
+// état initial
 const initialState = {
   employeeData: null,
 };
@@ -17,8 +17,8 @@ const sliceData = createSlice({
   },
 });
 
-// Exportez les actions
+// Exporter les actions
 export const { setEmployeeDataStore } = sliceData.actions;
 
-// Exportez le réducteur (reducer)
+// Exporter le réducteur (reducer)
 export default sliceData.reducer;

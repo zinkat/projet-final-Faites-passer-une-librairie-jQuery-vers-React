@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import {
   setFirstName,
@@ -16,7 +16,7 @@ import { addEmployee } from '../../store/employeeSlice '
 import './MyForm.css'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
-import Select from '../../components/Select'
+import Select from 'react-select-zinkat'
 import { states } from '../../services/states'
 import { departments } from '../../services/departments'
 
