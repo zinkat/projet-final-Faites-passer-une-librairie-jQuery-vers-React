@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux'
 import {
   setFirstName,
@@ -12,7 +12,6 @@ import {
   setSelectedDepartment,
   resetForm,
 } from '../../store/formSlices'
-import { addEmployee } from '../../store/employeeSlice '
 import './MyForm.css'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
@@ -57,8 +56,6 @@ function MyForm({ onSubmit }) {
 
     // Appel de la fonction de soumission (fournie en tant que prop)
     onSubmit({})
-    // Envoi de l'action Redux pour ajouter un employé avec les données du formulaire
-    dispatch(addEmployee({ form: formDataLowerCase }))
     // Mise à jour des données locales dans le localStorage
     const listData = JSON.parse(localStorage.getItem('employeeData')) || []
     listData.push(formDataLowerCase)
