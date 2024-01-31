@@ -5,12 +5,22 @@ import { useState } from 'react'
 import Modal from 'react-modal-zinkat'
 import 'react-modal-zinkat/dist/index.css'
 
+/**
+ * Page principale pour créer un nouvel employé.
+ * @component
+ */
+
 function Home() {
+  // État local pour le contrôle du modal
   const [isModalOpen, setModalOpen] = useState(false)
 
+  // Fonction pour ouvrir le modal
   const openModal = () => setModalOpen(true)
+
+  // Fonction pour fermer le modal
   const closeModal = () => setModalOpen(false)
 
+  // Fonction appelée lors de la soumission du formulaire
   const handleFormSubmit = () => {
     openModal()
   }

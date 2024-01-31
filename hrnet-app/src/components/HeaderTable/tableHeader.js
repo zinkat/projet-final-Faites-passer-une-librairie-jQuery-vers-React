@@ -1,5 +1,15 @@
 import React from 'react';
 
+/**
+ * Composant d'en-tête de tableau affichant les informations de pagination.
+ * @param {Object} props - Propriétés du composant.
+ * @param {number} props.itemsPerPage - Nombre d'éléments par page.
+ * @param {number} props.totalItems - Nombre total d'éléments.
+ * @param {Function} props.paginate - Fonction de pagination.
+ * @param {Function} props.setItemsPerPage - Fonction pour définir le nombre d'éléments par page.
+ * @returns {JSX.Element} Composant d'en-tête de tableau.
+ */
+
 export const TableHeader = ({ itemsPerPage, totalItems, paginate, setItemsPerPage }) => {
   return (
     <div className="table-header">

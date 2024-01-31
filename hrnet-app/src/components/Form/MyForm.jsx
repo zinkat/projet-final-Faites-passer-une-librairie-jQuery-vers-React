@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import {
   setFirstName,
@@ -18,6 +18,13 @@ import 'react-datepicker/dist/react-datepicker.css'
 import Select from 'react-select-zinkat'
 import { states } from '../../services/states'
 import { departments } from '../../services/departments'
+
+/**
+ * Formulaire de création d'employé.
+ * @param {Object} props - Propriétés du composant.
+ * @param {Function} props.onSubmit - Fonction de rappel appelée lors de la soumission du formulaire.
+ * @returns {JSX.Element} Composant du formulaire.
+ */
 
 function MyForm({ onSubmit }) {
   // Utilisation de Redux hooks pour accéder à dispatch et à l'état du formulaire
@@ -170,6 +177,7 @@ function MyForm({ onSubmit }) {
           autoComplete="off"
         />
         <div className="divBtn">
+          {/* Bouton de soumission */}
           <button
             type="submit"
             className={`btn ${!isFormFilled() && 'disabled'}`}

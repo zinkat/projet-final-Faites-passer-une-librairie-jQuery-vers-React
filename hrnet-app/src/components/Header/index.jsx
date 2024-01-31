@@ -1,9 +1,14 @@
-import React from 'react';
+import React from 'react'
 import Logo from '../../assets/logo.png'
 import './header.css'
 import { NavLink } from 'react-router-dom'
 import Table from '../../assets/liste.png'
 import createEmployee from '../../assets/formulaire.png'
+
+/**
+ * Composant d'en-tête affichant le logo et la barre de navigation.
+ * @returns {JSX.Element} Composant d'en-tête.
+ */
 
 function Header() {
   return (

@@ -7,15 +7,13 @@ import { sortedAndFilteredData } from '../../utils/sortedAndFiltered'
 import { Pagination } from '../Pagination/pagination'
 import { TableHeader } from '../HeaderTable/tableHeader'
 
-//import { useDispatch, useSelector } from 'react-redux'
-//import { setEmployeeDataStore } from '../../store/sliceData'
+/**
+ * Composant de tableau affichant la liste des employés.
+ * Gère le tri, la pagination et la recherche.
+ * @returns {JSX.Element} Composant de tableau.
+ */
 
 const Table = () => {
-  
-  //const submittedDataSlice = useSelector((state) => state.employee.submittedData);
-  //const dispatch = useDispatch()
-
-
   const [submittedData, setSubmittedData] = useState([])
   const [sortColumn, setSortColumn] = useState(null)
   const [sortOrder, setSortOrder] = useState('asc')
@@ -23,37 +21,58 @@ const Table = () => {
   const [currentPage, setCurrentPage] = useState(1)
   const [itemsPerPage, setItemsPerPage] = useState(10)
 
+  /**
+   * Fonction de formatage de la date au format 'dd/mm/yyyy'.
+   * @param {string} dateString - Chaîne de date à formater.
+   * @returns {string} Date formatée.
+   */
   const formatDate = (dateString) => {
     const options = { year: 'numeric', month: '2-digit', day: '2-digit' }
     return new Date(dateString).toLocaleDateString(undefined, options)
   }
 
+  /**
+   * Gère le tri des colonnes du tableau.
+   * @param {string} columnName - Nom de la colonne à trier.
+   */
+
   const handleSort = (columnName) => {
-    console.log(`Tri par ${columnName} dans l'ordre ${sortOrder}`);
-    
+    console.log(`Tri par ${columnName} dans l'ordre ${sortOrder}`)
+
     // Inversez l'ordre seulement si la colonne de tri actuelle est différente de la nouvelle colonne
-    const newSortOrder = sortColumn === columnName ? (sortOrder === 'asc' ? 'desc' : 'asc') : 'asc';
-    setSortOrder(newSortOrder);
-    setSortColumn(columnName);
+    const newSortOrder =
+      sortColumn === columnName ? (sortOrder === 'asc' ? 'desc' : 'asc') : 'asc'
+    setSortOrder(newSortOrder)
+    setSortColumn(columnName)
   }
+
+  /**
+   * Effet utilisé pour récupérer les données depuis localStorage au chargement du composant.
+   */
 
   useEffect(() => {
     // Récupération des données depuis localStorage au chargement du composant
     const savedData = JSON.parse(localStorage.getItem('employeeData')) || []
 
     //console.log('savedData from localStorage:', savedData)
-    //dispatch(setEmployeeDataStore(submittedDataSlice));
-    // (etat avce redux ajout dependence : dispatch, submittedDataSlice)
 
     setSubmittedData(savedData)
   }, [])
 
-  //console.log('submittedData:', submittedData)
+  /**
+   * Fonction pour gérer le changement de page.
+   * @param {number} pageNumber - Numéro de la page sélectionnée.
+   */
+
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber)
   }
 
-  // const sortedAndFiltered = sortedAndFilteredData(submittedData, sortColumn, sortOrder, searchTerm);
+  /**
+   * Fonction qui renvoie les données triées et filtrées pour la pagination.
+   * @returns {Array} Tableau de données pour la page actuelle.
+   */
+
   const sortedAndFiltered = () => {
     const dataAfterSortingAndFiltering = sortedAndFilteredData(
       submittedData,
@@ -62,7 +81,7 @@ const Table = () => {
       searchTerm,
     )
     const startIndex = (currentPage - 1) * itemsPerPage
-    
+
     const endIndex = startIndex + itemsPerPage
 
     return dataAfterSortingAndFiltering.slice(startIndex, endIndex)
