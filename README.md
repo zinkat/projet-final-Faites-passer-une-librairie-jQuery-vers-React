@@ -1,4 +1,12 @@
 # projet-final-Faites-passer-une-librairie-jQuery-vers-React
+## link to GitHub Packages select and modal
+
+### link modal 
+https://github.com/zinkat/react-modal-zinkat2
+
+### link select 
+https://github.com/zinkat/react-select-zinkat
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
