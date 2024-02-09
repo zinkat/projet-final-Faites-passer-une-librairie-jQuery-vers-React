@@ -1,11 +1,26 @@
 # projet-final-Faites-passer-une-librairie-jQuery-vers-React
-## link to GitHub Packages select and modal
+![page create Employee](home.png)
+![Current Employees](listEmployee.png)
+## Installation :
+1. Cloner le repository :
+- https://github.com/zinkat/projet-final-Faites-passer-une-librairie-jQuery-vers-React.git
+
+2. Installer toutes les dépendances :
+- `npm install` ou `yarn`
+
+3. Lancer le front-end:
+- `npm start` ou `yarn start`
+
+# link to GitHub Packages select and modal
 
 ### link modal 
 https://github.com/zinkat/react-modal-zinkat2
 
 ### link select 
 https://github.com/zinkat/react-select-zinkat
+
+# link to GitHub Packages react-datepicker
+https://github.com/Hacker0x01/react-datepicker
 
 # Getting Started with Create React App
 
