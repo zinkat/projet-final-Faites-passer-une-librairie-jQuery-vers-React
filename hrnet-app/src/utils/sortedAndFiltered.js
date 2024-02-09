@@ -14,9 +14,7 @@ export const sortedAndFilteredData = (
   sortOrder,
   searchTerm,
 ) => {
-  // Implémentez la logique de tri et de filtre ici et retournez les données triées et filtrées
   let dataToDisplay = [...submittedData]
-
   // Filtrer les données en fonction de la recherche
   dataToDisplay = dataToDisplay.filter((data) => {
     const firstName = data.form.firstName ? data.form.firstName : ''
@@ -30,7 +28,6 @@ export const sortedAndFilteredData = (
     const selectedDepartment = data.form.selectedDepartment
       ? data.form.selectedDepartment
       : ''
-
     return (
       firstName.includes(searchTerm) ||
       lastName.includes(searchTerm) ||
@@ -43,22 +40,15 @@ export const sortedAndFilteredData = (
       selectedDepartment.includes(searchTerm)
     )
   })
-
   // Trier les données
   if (sortColumn) {
     dataToDisplay = dataToDisplay.sort((a, b) => {
       const aValue = a.form[sortColumn] || ''
       const bValue = b.form[sortColumn] || ''
-
       return sortOrder === 'asc'
         ? aValue.localeCompare(bValue)
         : bValue.localeCompare(aValue)
     })
-
-    // if (sortOrder === 'desc') {
-    //   dataToDisplay.reverse();
-    // }
   }
-
   return dataToDisplay
 }

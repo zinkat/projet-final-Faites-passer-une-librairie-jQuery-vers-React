@@ -37,8 +37,6 @@ const Table = () => {
    */
 
   const handleSort = (columnName) => {
-    console.log(`Tri par ${columnName} dans l'ordre ${sortOrder}`)
-
     // Inversez l'ordre seulement si la colonne de tri actuelle est différente de la nouvelle colonne
     const newSortOrder =
       sortColumn === columnName ? (sortOrder === 'asc' ? 'desc' : 'asc') : 'asc'

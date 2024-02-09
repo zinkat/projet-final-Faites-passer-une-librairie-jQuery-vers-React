@@ -22,7 +22,7 @@ export const TableHeader = ({ itemsPerPage, totalItems, paginate, setItemsPerPag
           id="rowsPerPage"
           value={itemsPerPage}
           onChange={(e) => {
-            setItemsPerPage(parseInt(e.target.value, 10));
+            setItemsPerPage(parseInt(e.target.value, 10));  // Gérer le changement du nombre d'éléments par page
             paginate(1); // Revenir à la première page après le changement du nombre d'éléments par page
           }}
         > 

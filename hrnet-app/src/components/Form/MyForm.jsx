@@ -36,12 +36,15 @@ function MyForm({ onSubmit }) {
   // Vérification si les champs obligatoires du formulaire sont remplis
   const isFormFilled = () => {
     return (
+      form.form.firstName &&
+      form.form.lastName &&
       form.form.birthDate &&
       form.form.startDate &&
       form.form.selectedState &&
       form.form.selectedDepartment &&
-      form.form.selectedState.trim() !== '' &&
-      form.form.selectedDepartment.trim() !== ''
+      form.form.zipCode &&
+      form.form.selectedState &&
+      form.form.selectedDepartment
     )
   }
   // Gestion de la soumission du formulaire
@@ -56,8 +59,6 @@ function MyForm({ onSubmit }) {
         lastName: form.form.lastName.toLowerCase(),
         street: form.form.street.toLowerCase(),
         city: form.form.city.toLowerCase(),
-        //selectedState: form.form.selectedState.toLowerCase(),
-        //selectedDepartment: form.form.selectedDepartment.toLowerCase(),
       },
     }
 

@@ -27,7 +27,7 @@ const formSlice = createSlice({
       state.form = { ...state.form, birthDate: action.payload };
     },
     setStartDate: (state, action) => {
-      state.form ={...state.form, startDate:action.payload} ;
+      state.form ={ ...state.form, startDate:action.payload} ;
     },
     setStreet: (state, action) => {
       state.form.street = action.payload;

@@ -27,7 +27,7 @@ function Header() {
           className={({ isActive }) => (isActive ? 'active' : 'navlink')}
           to="/EmployeeList"
         >
-          <img className="icone " src={Table} alt="View Current Employees" />{' '}
+          <img className="icone " src={Table} alt="View Current Employees" />
           <p>View Current Employees</p>
         </NavLink>
         <NavLink
